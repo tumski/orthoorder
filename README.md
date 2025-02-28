@@ -34,3 +34,34 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Database Setup
+
+This project uses [Drizzle ORM](https://orm.drizzle.team/) with PostgreSQL (Neon).
+
+1. Configure your database connection:
+
+   - Set the `DATABASE_URL` in your `.env` file:
+
+   ```
+   DATABASE_URL=postgresql://username:password@hostname:port/database
+   ```
+
+2. Generate migrations:
+
+   ```bash
+   npm run db:generate
+   # or
+   yarn db:generate
+   # or
+   pnpm db:generate
+   ```
+
+3. Run migrations:
+   ```bash
+   npm run db:migrate
+   # or
+   yarn db:migrate
+   # or
+   pnpm db:migrate
+   ```
